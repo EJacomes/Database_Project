@@ -1,10 +1,28 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <style>
+            body {
+                background-color: black;
+                color:white;
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            }
+
+            .button {
+                 background-color: gray;
+                 color: white;
+                 padding: 15px 32px;
+                 text-align: center;
+                 text-decoration: none;
+                 display: inline-block;
+                 font-size: 16px;
+                 margin: 4px 2px;
+                 cursor: pointer;
+                }
+        </style>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width">
         <title>HomePage</title>
-        <link href="BackGround.css" rel="stylesheet" type="text/css" />
     </head>
     <body>
         <center>
@@ -15,18 +33,19 @@
 
             <button id="InsertTableButton" class="button" type="button">Create a row in a table</button>
             <br></br>
-            <label for="Table">Select a Table:</label>
-            <select name="Table" id="Table">
-                <option value="User">User</option>
+            <label>Select a table:</label>
+            <select id="PickTable">
                 <option value="Figures">Figures</option>
+                <option value="Manufacturer">Manufacturer</option>
                 <option value="Seller">Seller</option>
-                <option value="Manufacturer">Manufacture</option>
+                <option value="User">User</option>
             </select>
             <script src="LinkToTablePage.JS"></script>
 
             <br></br>
 
-            <button class="button" type="button">View Table</button>
+            <button class="button" id="ViewTable" type="button">View Table</button>
+            <script src="LinktoViewTable.JS"></script>
             <br></br>
         </center>
     </body>
