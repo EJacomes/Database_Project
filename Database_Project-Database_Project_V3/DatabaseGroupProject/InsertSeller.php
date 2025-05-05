@@ -5,18 +5,18 @@ if($_GET['submit'])
 {
     //'studentnumber', 'studentname', and 'coursename' are placeholders remove them and put the proper names
 $sID = $_GET['SellerID'];
-$sName = $_GET[''];
-$sLocation = $_GET[''];
-$sPrice = $_GET[''];
-$sSite = $_GET[''];
-$sManufacturerName = $_GET[''];
+$sName = $_GET['SellerName'];
+$sLocation = $_GET['RetailerLocation'];
+$sPrice = $_GET['Price'];
+$sSite = $_GET['SellerSite'];
+$sManufacturerName = $_GET['ManufacturerName'];
 
 
-//Only $fID is checked since the rest of the values are set to Null by default
-  if($fID != "")
+//Only $sID is checked since the rest of the values are set to Null by default
+  if($sID != "")
    {
    // To write a query in php environment
-     $query = "INSERT INTO figures VALUES ('$fID', '$fName', '$fSeries', '$fManufacturerName', '$fSellerName', '$fUserName', '$fDateGotten', '$fDateRelease', '$fPrice', '$fCountryOfOrigin', '$fCountryOfUser')";
+     $query = "INSERT INTO figures VALUES ('$sID', '$sName', '$sLocation', '$sPrice', '$sSite', '$sManufacturerName')";
 
    // To run a query in PHP environment
      $data = mysqli_query($conn, $query);
