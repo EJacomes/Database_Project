@@ -70,13 +70,29 @@ function FormSelect($FilterRB, $FilterTB, $FilterJ)
 {
     $quer = "Select ";
 
+    //sets up the select statement by taking the elements that are in the array and passing them through this for loop which will look at the position of the element looked like to determine the structure of the format
     for ($i = 0; $i < count($FilterRB); $i++)
     {
-        if ($i == 0)
+        if (count($FilterRB) == 11)
+        {
+            $quer = $quer + "* from figures";
+            break;
+        }
+        else if ($i == 0)
         {
             $quer = $quer + $FilterRB[$i];
         }
-        else if ()
+        else if ($i > 0 && $i < count($FilterRB)) //if $i is greater then 0 but less then count($arr) - 1
+        {
+            $quer = $quer + ", " + $FilterRB[$i];
+        }
+        else if ($i == (count($FilterRB) - 1))
+        {
+            $quer = $quer + " from figures";
+        }
     }
+
+    //needs to insert something where if a join is selected then a having statement is used and if not then a where statement is used
+    //having statement must also have a group by clause before it
 }
 ?>
