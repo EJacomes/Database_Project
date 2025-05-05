@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body {
+                background-color: black;
+                color:white;
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            }
+
+            .button {
+                 background-color: gray;
+                 color: white;
+                 padding: 15px 32px;
+                 text-align: center;
+                 text-decoration: none;
+                 display: inline-block;
+                 font-size: 16px;
+                 margin: 4px 2px;
+                 cursor: pointer;
+                }
+        </style>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <title>HomePage</title>
+    </head>
+    <body>
+        <button id="backbutton" class="button" type="button">Back</button>
+        <script src="BackButton.JS"></script>
+        <center>
+            <h1>User Table</h1>
+            <h3>Insert Data</h3>
+        </center>   
+        <!--This next segment will use a form action attribute and it will have action="#" as a placeholder, put the respective file that gets the data and inserts it-->
+        <form action="#">
+            <label for="UserID">User ID:</label>
+            <input type="text" id="UserID" name="UserID" placeholder="Enter ID" required>
+            <br></br>
+            <label for="UserName">Figure Name</label>
+            <input type="text" id="UserName" name="UserName" placeholder="Enter Name" required>
+            <br></br>
+            <!--This part is basically taking the sum of the prices of the figures that the user has-->
+            <label for="ValueOfFigures">Value of the Figures</label>
+            <input type="text" id="ValueOfFigures" name="ValueOfFigures" placeholder="Enter Value" required>
+            <br></br>
+            <label for="CountryOfUser">country of the User</label>
+            <input type="text" id="CountryOfUser" name="CountryOfUser" placeholder="Enter country of the User" required>
+            <br></br>
+            <label for="BroughtFrom">Brought From</label>
+            <input type="text" id="BroughtFrom" name="BroughtFrom" placeholder="Enter The Vendor" required>
+            <br></br>
+            <center>
+                <button id="submitFigureData" class="button" type="submit">Submit</button>
+            </center>
+        </form>
+    </body>
+</html>
