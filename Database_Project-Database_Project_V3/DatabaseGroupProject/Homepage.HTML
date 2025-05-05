@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body {
+                background-color: black;
+                color:white;
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            }
+
+            .button {
+                 background-color: gray;
+                 color: white;
+                 padding: 15px 32px;
+                 text-align: center;
+                 text-decoration: none;
+                 display: inline-block;
+                 font-size: 16px;
+                 margin: 4px 2px;
+                 cursor: pointer;
+                }
+        </style>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <title>HomePage</title>
+    </head>
+    <body>
+        <center>
+            <h1>Figure Database</h1>
+            <br></br>
+            <br></br>
+            <br></br>
+
+            <button id="InsertTableButton" class="button" type="button">Create a row in a table</button>
+            <br></br>
+            <label>Select a table:</label>
+            <select id="PickTable">
+                <option value="Figures">Figures</option>
+                <option value="Manufacturer">Manufacturer</option>
+                <option value="Seller">Seller</option>
+                <option value="User">User</option>
+            </select>
+            <script src="LinkToTablePage.JS"></script>
+
+            <br></br>
+
+            <button class="button" id="ViewTableButton" type="button">View Table</button>
+            <br></br>
+            <label>Select a table:</label>
+            <select id="ViewTable">
+                <option value="Figures">Figures</option>
+                <option value="Manufacturer">Manufacturer</option>
+                <option value="Seller">Seller</option>
+                <option value="User">User</option>
+            </select>
+            <script src="LinktoViewTable.JS"></script>
+            <br></br>
+        </center>
+    </body>
+</html>
