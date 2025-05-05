@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body {
+                background-color: black;
+                color:white;
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            }
+
+            .button {
+                 background-color: gray;
+                 color: white;
+                 padding: 15px 32px;
+                 text-align: center;
+                 text-decoration: none;
+                 display: inline-block;
+                 font-size: 16px;
+                 margin: 4px 2px;
+                 cursor: pointer;
+                }
+        </style>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <title>HomePage</title>
+    </head>
+    <body>
+        <!--
+        Options include
+        Simple Select all for the table of their choice
+        A filter that only shows selected columns that the user picks from their picked table of choice
+        A filter that would perform a where clause
+        A filter that would do a join clause on a x amount of tables on the the user picked table
+        A filter that serve as a group by clause
+        A filter for certain tables where it can do min and max, count, sum, avg
+        A filter that allows for updates and deletes 
+        (Insert more filter if any more ideas come)
+        -->
+        <button id="backbutton" class="button" type="button">Back</button>
+        <script src="BackButton.JS"></script>
+        <center>
+            <h1>Figure Table</h1>
+            <h3>Filters</h3>
+        </center>
+        <form action="#" method="#">
+            <center>
+                <p1>Select the tables you want to see</p1>
+                <br></br>
+                <label for="SelectFigureID">FigureID</label>
+                <input type="radio" id="SelectFigureID" name="SelectFigureID">
+                <label for="SelectFigureName">FigureName</label>
+                <input type="radio" id="SelectFigureName" name="SelectFigureName">
+                <label for="SelectSeries">Series</label>
+                <input type="radio" id="SelectSeries" name="SelectSeries">
+                <label for="SelectManufacturerName">ManufacturerName</label>
+                <input type="radio" id="SelectManufacturerName" name="SelectManufacturerName">
+                <label for="SelectSellerName">SellerName</label>
+                <input type="radio" id="SelectSellerName" name="SelectSellerName">
+                <label for="SelectUserName">UserName</label>
+                <input type="radio" id="SelectUserName" name="SelectUserName">
+                <label for="SelectDateGotten">DateGotten</label>
+                <input type="radio" id="SelectDateGotten" name="SelectDateGotten">
+                <label for="SelectDateRelease">DateRelease</label>
+                <input type="radio" id="SelectDateRelease" name="SelectDateRelease">
+                <label for="SelectPrice">Price</label>
+                <input type="radio" id="SelectPrice" name="SelectPrice">
+                <label for="SelectCountryOfOrigin">CountryOfOrigin</label>
+                <input type="radio" id="CountryOfOrigin" name="CountryOfOrigin">
+                <label for="SelectCountryOfUser">CountryOfUser</label>
+                <input type="radio" id="CountryOfUser" name="CountryOfUser">
+                <br></br>
+                <p1>Insert values to filter by</p1>
+                <label for="FigureIDValue">Figure ID</label>
+                <input type="text" id="FigureIDValue" name="FigureIDValue" placeholder="Enter ID">
+                <label for="FigureNameValue">Figure Name</label>
+                <input type="text" id="FigureNameValue" name="FigureNameValue" placeholder="Enter Name">
+                <label for="SeriesValue">Series Name</label>
+                <input type="text" id="SeriesValue" name="SeriesValue" placeholder="Enter Series Name">
+                <label for="ManufacturerNameValue">ManufacturerName Name</label>
+                <input type="text" id="ManufacturerNameValue" name="ManufacturerNameValue" placeholder="Enter manufacturer name">
+                <label for="SellerNameValue">Seller Name</label>
+                <input type="text" id="SellerNameValue" name="SellerNameValue" placeholder="Enter Seller name">
+                <label for="UserNameValue">User Name</label>
+                <input type="text" id="UserNameValue" name="UserNameValue" placeholder="Enter userName">
+                <label for="DateGottenValue">Date gotten</label>
+                <input type="text" id="DateGottenValue" name="DateGottenValue" placeholder="Enter Date">
+                <label for="DateReleaseValue">Date When Figure was Released</label>
+                <input type="text" id="DateReleaseValue" name="DateReleaseValue" placeholder="Enter Date">
+                <label for="PriceValue">Price of Figure</label>
+                <input type="text" id="PriceValue" name="PriceValue" placeholder="Enter Price">
+                <label for="CountryOfOriginValue">Country Origin</label>
+                <input type="text" id="CountryOfOriginValue" name="CountryOfOriginValue" placeholder="Enter Country Of Origin">
+                <label for="CountryOfUserValue">Country of the User</label>
+                <input type="text" id="CountryOfUserValue" name="CountryOfUserValue" placeholder="Enter Country of User">
+                <br></br>
+                <p1>Select a table to join</p1>
+                <label for="JoinTable">Table</label>
+                <input type="text" id="JoinTable" name="JoinTable" placeholder="Enter Table">
+                <label for="JoinAttribute">Attribute</label>
+                <input type="text" id="JoinAttribute" name="JoinAttribute" placeholder="Enter Attribute">
+                <br></br>
+                <button id="submitFigureData" class="button" type="submit">Submit</button>
+            </center>
+        </form>
+    </body>
+</html>
