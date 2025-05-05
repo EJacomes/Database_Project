@@ -6,6 +6,7 @@
 //include soemthing to where if user does"smt, smt" in the textbox that it doesn't allow it, same for the join boxes
 //for the text box regarding joining heres an example, Ex:user puts seller and says to join by SellerName then "Select * from Figures join Seller ON Figure.SellerName = Seller.SellerName
 //add in Update and delete functions
+//have the submit button go to here
 //table will appear here
 if($_GET['submit'])
 {
@@ -68,5 +69,14 @@ function filtheredArr($Array)
 function FormSelect($FilterRB, $FilterTB, $FilterJ)
 {
     $quer = "Select ";
+
+    for ($i = 0; $i < count($FilterRB); $i++)
+    {
+        if ($i == 0)
+        {
+            $quer = $quer + $FilterRB[$i];
+        }
+        else if ()
+    }
 }
 ?>
