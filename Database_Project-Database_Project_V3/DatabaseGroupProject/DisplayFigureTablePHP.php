@@ -208,8 +208,19 @@ while($result = mysqli_fetch_assoc($data)) // don't put semi colon here
                <td> ".$result['Price']."  </td>
                <td> ".$result['CountryOfOrigin']."  </td>
                <td> ".$result['CountryOfUser']."  </td>
+               <td> <a href = 'update.php?fID=$result[FigureID]&fName=$result[FigureName]&fManufacturerName=$result[ManufacturerName]&fSellerName=$result[SellerName]&fUserName=$result[UserName]&fDateGotten=$result[DateGotten]&fDateRelease=$result[DateRelease]&fPrice=$result[Price]&fCountryOfOrigin=$result[CountryOfOrigin]&fCountryOfUser=$result[CountryOfUser]'>Edit</a> </td>
+               <td> <a href = 'delete.php?fID=$result[FigureID]'
+               onclick='return checkdelete()'>Delete </a> </td>
             </tr> ";    
      }
 ?>
+</table>
+
+<script>
+  function checkdelete()
+  {
+   return confirm('Are you sure you would like to delete one record!');
+  }
+</script>
 </body>
 </html>
