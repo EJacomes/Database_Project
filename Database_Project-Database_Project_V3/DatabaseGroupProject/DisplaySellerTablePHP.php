@@ -38,36 +38,26 @@ include ("Connection.php");
 if($_GET['submit'])
 {
     //radio buttons
-    $sfID = $_GET['SelectFigureID'];
-    $sfName = $_GET['SelectFigureName'];
-    $sfSeries = $_GET['SelectSeries'];
-    $sfManufacturerName = $_GET['SelectManufacturerName'];
-    $sfSellerName = $_GET['SelectSellerName'];
-    $sfUserName = $_GET['SelectUserName'];
-    $sfDateGotten = $_GET['SelectDateGotten'];
-    $sfDateRelease = $_GET['SelectDateRelease'];
-    $sfPrice = $_GET['SelectPrice'];
-    $sfCountryOfOrigin = $_GET['SelectCountryOfOrigin'];
-    $sfCountryOfUser = $_GET['SelectCountryOfUser'];
+    $ssID = $_GET['SelectSellerID'];
+    $ssName = $_GET['SelectSellerName'];
+    $ssLocation = $_GET['SelectRetailerLocation'];
+    $ssPrice = $_GET['SelectPrice'];
+    $ssSite = $_GET['SelectSellerSite'];
+    $ssManufacturerName = $_GET['SelectManufacturerName'];
     //Text boxes
-    $sfIDval = $_GET['FigureIDValue'];
-    $sfNameval = $_GET['FigureNameValue'];
-    $sfSeriesval = $_GET['SeriesValue'];
-    $sfManufacturerNameval = $_GET['ManufacturerNameValue'];
-    $sfSellerNameval = $_GET['SellerNameValue'];
-    $sfUserNameval = $_GET['UserNameValue'];
-    $sfDateGottenval = $_GET['DateGottenValue'];
-    $sfDateReleaseval = $_GET['DateReleaseValue'];
-    $sfPriceval = $_GET['PriceValue'];
-    $sfCountryOfOriginval = $_GET['CountryOfOriginValue'];
-    $sfCountryOfUserval = $_GET['CountryOfUserValue'];
+    $ssIDval = $_GET['SellerIDValue'];
+    $ssNameval = $_GET['SellerNameValue'];
+    $ssLocationval = $_GET['SellerRetailerLocationValue'];
+    $ssPriceval = $_GET['PriceValue'];
+    $ssSiteVal = $_GET['SellerSiteValue']
+    $smSellerNameval = $_GET['ManufacturerNameValue'];
     //joining stuff
     $jTable = $_GET['JoinTable'];
     $jAttribute = $_GET['JoinAttribute'];
 
     //the arrays that will be filtered in order to see which variables have a value in them to place in the insert statement
-    $RadioButtons = [$sfID, $sfName, $sfSeries, $sfManufacturerName, $sfSellerName, $sfUserName, $sfDateGotten, $sfDateRelease, $sfPrice, $sfCountryOfOrigin, $sfCountryOfUser];
-    $TextBoxes = [$sfIDval, $sfNameval, $sfSeriesval, $sfManufacturerNameval, $sfSellerNameval, $sfUserNameval, $sfDateGottenval, $sfDateReleaseval, $sfPriceval, $sfCountryOfOriginval, $sfCountryOfUserval];
+    $RadioButtons = [$ssID, $ssName, $ssLocation, $ssSite, $ssManufacturerName];
+    $TextBoxes = [$ssIDval, $ssNameval, $ssLocationval, $ssSiteval, $ssManufacturerNameval];
     $Join = [$jTable, $jTable];
 
     $FiltheredRadioButton = filtheredArr($RadioButtons);
@@ -180,34 +170,23 @@ function FormSelect($FilterRB, $FilterTB, $FilterJ)
 <!--Display Table-->
 <table>
   <tr>
-      <th> Figure ID  </th>
-       <th> Figure Name  </th>
-       <th> Series </th>
+       <th> Seller ID  </th>
+       <th> Seller Name  </th>
+       <th> Seller Location </th>
+       <th> Seller site </th>
        <th> Manufacturer Name </th>
-       <th> Seller Name </th>
-       <th> User Name </th>
-       <th> Date Gotten </th>
-       <th> Date Release </th>
-       <th> Price </th>
-       <th> Country of Origin </th>
-       <th> Country of User </th>
   </tr>
 <?php
 
 while($result = mysqli_fetch_assoc($data)) // don't put semi colon here
      {
       echo "<tr>
-               <td> ".$result['FigureID']."  </td>
-               <td> ".$result['FigureName']."  </td>
-               <td> ".$result['Series']."  </td>
-               <td> ".$result['ManufacturerName']."  </td>
+               <td> ".$result['SellerID']."  </td>
                <td> ".$result['SellerName']."  </td>
-               <td> ".$result['UserName']."  </td>
-               <td> ".$result['DateGotten']."  </td>
-               <td> ".$result['DateRelease']."  </td>
+               <td> ".$result['RetailerLocation']."  </td>
                <td> ".$result['Price']."  </td>
-               <td> ".$result['CountryOfOrigin']."  </td>
-               <td> ".$result['CountryOfUser']."  </td>
+               <td> ".$result['SellerName']."  </td>
+               <td> ".$result['ManufacturerName']" </td>
             </tr> ";    
      }
 ?>

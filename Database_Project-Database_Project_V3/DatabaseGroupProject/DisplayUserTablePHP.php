@@ -38,36 +38,24 @@ include ("Connection.php");
 if($_GET['submit'])
 {
     //radio buttons
-    $sfID = $_GET['SelectFigureID'];
-    $sfName = $_GET['SelectFigureName'];
-    $sfSeries = $_GET['SelectSeries'];
-    $sfManufacturerName = $_GET['SelectManufacturerName'];
-    $sfSellerName = $_GET['SelectSellerName'];
-    $sfUserName = $_GET['SelectUserName'];
-    $sfDateGotten = $_GET['SelectDateGotten'];
-    $sfDateRelease = $_GET['SelectDateRelease'];
-    $sfPrice = $_GET['SelectPrice'];
-    $sfCountryOfOrigin = $_GET['SelectCountryOfOrigin'];
-    $sfCountryOfUser = $_GET['SelectCountryOfUser'];
+    $suID = $_GET['SelectUserID'];
+    $suName = $_GET['SelectUserName'];
+    $suValueOfFigures = $_GET['SelectValueOfFigures'];
+    $suCountryOfUser = $_GET['SelectCountryOfUser'];
+    $suBroughtFrom = $_GET['SelectBroughtFrom'];
     //Text boxes
-    $sfIDval = $_GET['FigureIDValue'];
-    $sfNameval = $_GET['FigureNameValue'];
-    $sfSeriesval = $_GET['SeriesValue'];
-    $sfManufacturerNameval = $_GET['ManufacturerNameValue'];
-    $sfSellerNameval = $_GET['SellerNameValue'];
-    $sfUserNameval = $_GET['UserNameValue'];
-    $sfDateGottenval = $_GET['DateGottenValue'];
-    $sfDateReleaseval = $_GET['DateReleaseValue'];
-    $sfPriceval = $_GET['PriceValue'];
-    $sfCountryOfOriginval = $_GET['CountryOfOriginValue'];
-    $sfCountryOfUserval = $_GET['CountryOfUserValue'];
+    $suIDval = $_GET['UserIDValue'];
+    $suNameval = $_GET['UserNameValue'];
+    $suValueOfFiguresval = $_GET['ValueOfFiguresValue'];
+    $suCountryOfUserValueval = $_GET['CountryOfUserValue'];
+    $suBroughtFromValueval = $_GET['BroughtFromValue'];
     //joining stuff
     $jTable = $_GET['JoinTable'];
     $jAttribute = $_GET['JoinAttribute'];
 
     //the arrays that will be filtered in order to see which variables have a value in them to place in the insert statement
-    $RadioButtons = [$sfID, $sfName, $sfSeries, $sfManufacturerName, $sfSellerName, $sfUserName, $sfDateGotten, $sfDateRelease, $sfPrice, $sfCountryOfOrigin, $sfCountryOfUser];
-    $TextBoxes = [$sfIDval, $sfNameval, $sfSeriesval, $sfManufacturerNameval, $sfSellerNameval, $sfUserNameval, $sfDateGottenval, $sfDateReleaseval, $sfPriceval, $sfCountryOfOriginval, $sfCountryOfUserval];
+    $RadioButtons = [$suID, $suName, $suValueOfFigures, $suCountryOfUser, $suBroughtFrom];
+    $TextBoxes = [$suIDval, $suNameval, $suValueOfFiguresval, $suCountryOfUserval, $suBroughtFromval];
     $Join = [$jTable, $jTable];
 
     $FiltheredRadioButton = filtheredArr($RadioButtons);
@@ -180,34 +168,22 @@ function FormSelect($FilterRB, $FilterTB, $FilterJ)
 <!--Display Table-->
 <table>
   <tr>
-      <th> Figure ID  </th>
-       <th> Figure Name  </th>
-       <th> Series </th>
-       <th> Manufacturer Name </th>
-       <th> Seller Name </th>
-       <th> User Name </th>
-       <th> Date Gotten </th>
-       <th> Date Release </th>
-       <th> Price </th>
-       <th> Country of Origin </th>
-       <th> Country of User </th>
+       <th> User ID  </th>
+       <th> User Name  </th>
+       <th> Value Of Figures </th>
+       <th> Country Of User </th>
+       <th> Brought From </th>
   </tr>
 <?php
 
 while($result = mysqli_fetch_assoc($data)) // don't put semi colon here
      {
       echo "<tr>
-               <td> ".$result['FigureID']."  </td>
-               <td> ".$result['FigureName']."  </td>
-               <td> ".$result['Series']."  </td>
-               <td> ".$result['ManufacturerName']."  </td>
-               <td> ".$result['SellerName']."  </td>
+               <td> ".$result['UserID']."  </td>
                <td> ".$result['UserName']."  </td>
-               <td> ".$result['DateGotten']."  </td>
-               <td> ".$result['DateRelease']."  </td>
-               <td> ".$result['Price']."  </td>
-               <td> ".$result['CountryOfOrigin']."  </td>
+               <td> ".$result['ValueOfFigures']."  </td>
                <td> ".$result['CountryOfUser']."  </td>
+               <td> ".$result['BroughtFrom']."  </td>
             </tr> ";    
      }
 ?>

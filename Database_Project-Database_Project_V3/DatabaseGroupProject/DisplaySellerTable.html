@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body {
+                background-color: black;
+                color:white;
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            }
+
+            .button {
+                 background-color: gray;
+                 color: white;
+                 padding: 15px 32px;
+                 text-align: center;
+                 text-decoration: none;
+                 display: inline-block;
+                 font-size: 16px;
+                 margin: 4px 2px;
+                 cursor: pointer;
+                }
+        </style>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <title>DisplayManu</title>
+    </head>
+    <body>
+        <!--
+        Options include
+        Simple Select all for the table of their choice
+        A filter that only shows selected columns that the user picks from their picked table of choice
+        A filter that would perform a where clause
+        A filter that would do a join clause on a x amount of tables on the the user picked table
+        A filter that serve as a group by clause
+        A filter for certain tables where it can do min and max, count, sum, avg
+        A filter that allows for updates and deletes 
+        -->
+        <button id="backbutton" class="button" type="button">Back</button>
+        <script src="BackButton.JS"></script>
+        <center>
+            <h1>Figure Table</h1>
+            <h3>Filters</h3>
+        </center>
+        <form action="DisplaySellerTablePHP.php" method="get">
+            <center>
+                <p1>Select the tables you want to see</p1>
+                <br></br>
+                <label for="SelectSellerID">SellerID</label>
+                <input type="radio" id="SelectSellerID" name="SelectSellerID" value="SellerID">
+                <label for="SelectSellerName">SellerName</label>
+                <input type="radio" id="SelectSellerName" name="SelectSellerName" value="SellerName">
+                <label for="SelectRetailerLocation">RetailerLocation</label>
+                <input type="radio" id="SelectRetailerLocation" name="SelectRetailerLocation" value="RetailerLocation">
+                <label for="SelectPrice">Price</label>
+                <input type="radio" id="SelectPrice" name="SelectPrice" value="Price">
+                <label for="SelectSellerSite">SellerSite</label>
+                <input type="radio" id="SelectSellerSite" name="SelectSellerSite" value="SellerSite">
+                <label for="SelectManufacturerName">ManufacturerName</label>
+                <input type="radio" id="SelectManufacturerName" name="SelectManufacturerName" value="ManufacturerName">
+                <br></br>
+                <p1>Insert values to filter by</p1>
+                <label for="SellerIDValue">Seller ID</label>
+                <input type="text" id="SellerIDValue" name="SellerIDValue" value="" placeholder="Enter ID">
+                <label for="SellerNameValue">Seller Name</label>
+                <input type="text" id="SellerNameValue" name="SellerNameValue" value="" placeholder="Enter Seller Name">
+                <label for="SellerRetailerLocationValue">Seller Name</label>
+                <input type="text" id="SellerRetailerLocationValue" name="SellerRetailerLocationValue" value="" placeholder="Enter Location">
+                <label for="PriceValue">Price</label>
+                <input type="text" id="PriceValue" name="PriceValue" value="" placeholder="Enter Price">
+                <label for="SellerSiteValue">Site</label>
+                <input type="text" id="SellerSiteValue" name="SellerSiteValue" value="" placeholder="Enter Site">
+                <label for="ManufacturerNameValue">Manufacturer Name</label>
+                <input type="text" id="ManufacturerNameValue" name="ManufacturerNameValue" value="" placeholder="Enter Name">
+                <br></br>
+                <p1>Select a table to join</p1>
+                <label for="JoinTable">Table</label>
+                <input type="text" id="JoinTable" name="JoinTable" value="" placeholder="Enter Table">
+                <label for="JoinAttribute">Attribute</label>
+                <input type="text" id="JoinAttribute" name="JoinAttribute" value="" placeholder="Enter Attribute">
+                <br></br>
+                <button id="submitSellerData" class="button" type="submit">Submit</button>
+                <script src="HtmltoPHPPAgeSeller.JS"></script>
+            </center>
+        </form>
+    </body>
+</html>

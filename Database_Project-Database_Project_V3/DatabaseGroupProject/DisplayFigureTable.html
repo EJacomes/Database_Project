@@ -22,7 +22,7 @@
         </style>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width">
-        <title>HomePage</title>
+        <title>Displayfigures</title>
     </head>
     <body>
         <!--
@@ -34,7 +34,6 @@
         A filter that serve as a group by clause
         A filter for certain tables where it can do min and max, count, sum, avg
         A filter that allows for updates and deletes 
-        (Insert more filter if any more ideas come)
         -->
         <button id="backbutton" class="button" type="button">Back</button>
         <script src="BackButton.JS"></script>
@@ -51,7 +50,7 @@
                 <label for="SelectFigureName">FigureName</label>
                 <input type="radio" id="SelectFigureName" name="SelectFigureName" value="FigureName">
                 <label for="SelectSeries">Series</label>
-                <input type="radio" id="SelectSeries" name="Series">
+                <input type="radio" id="SelectSeries" name="SelectSeries" value="Series">
                 <label for="SelectManufacturerName">ManufacturerName</label>
                 <input type="radio" id="SelectManufacturerName" name="SelectManufacturerName" value="ManufacturerName">
                 <label for="SelectSellerName">SellerName</label>
@@ -100,6 +99,7 @@
                 <input type="text" id="JoinAttribute" name="JoinAttribute" value="" placeholder="Enter Attribute">
                 <br></br>
                 <button id="submitFigureData" class="button" type="submit">Submit</button>
+                <script src="HtmltoPHPPageFig.JS"></script>
             </center>
         </form>
     </body>

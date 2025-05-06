@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body {
+                background-color: black;
+                color:white;
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            }
+
+            .button {
+                 background-color: gray;
+                 color: white;
+                 padding: 15px 32px;
+                 text-align: center;
+                 text-decoration: none;
+                 display: inline-block;
+                 font-size: 16px;
+                 margin: 4px 2px;
+                 cursor: pointer;
+                }
+        </style>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <title>DisplayManu</title>
+    </head>
+    <body>
+        <!--
+        Options include
+        Simple Select all for the table of their choice
+        A filter that only shows selected columns that the user picks from their picked table of choice
+        A filter that would perform a where clause
+        A filter that would do a join clause on a x amount of tables on the the user picked table
+        A filter that serve as a group by clause
+        A filter for certain tables where it can do min and max, count, sum, avg
+        A filter that allows for updates and deletes 
+        -->
+        <button id="backbutton" class="button" type="button">Back</button>
+        <script src="BackButton.JS"></script>
+        <center>
+            <h1>Figure Table</h1>
+            <h3>Filters</h3>
+        </center>
+        <form action="DisplayUserTablePHP.php" method="get">
+            <center>
+                <p1>Select the tables you want to see</p1>
+                <br></br>
+                <label for="SelectUserID">UserID</label>
+                <input type="radio" id="SelectUserID" name="SelectUserID" value="UserID">
+                <label for="SelectUserName">UserName</label>
+                <input type="radio" id="SelectUserName" name="SelectUserName" value="UserName">
+                <label for="SelectValueOfFigures">ValueOfFigures</label>
+                <input type="radio" id="SelectValueOfFigures" name="SelectValueOfFigures" value="ValueOfFigures">
+                <label for="SelectCountryOfUser">CountryOfUser</label>
+                <input type="radio" id="SelectCountryOfUser" name="SelectCountryOfUser" value="CountryOfUser">
+                <label for="SelectBroughtFrom">BroughtFrom</label>
+                <input type="radio" id="SelectBroughtFrom" name="SelectBroughtFrom" value="BroughtFrom">
+                <br></br>
+                <p1>Insert values to filter by</p1>
+                <label for="UserIDValue">User ID</label>
+                <input type="text" id="UserIDValue" name="UserIDValue" value="" placeholder="Enter ID">
+                <label for="UserNameValue">User Name</label>
+                <input type="text" id="UserNameValue" name="UserNameValue" value="" placeholder="Enter Name">
+                <label for="ValueOfFiguresValue">Value Of Figures</label>
+                <input type="text" id="ValueOfFiguresValue" name="ValueOfFiguresValue" value="" placeholder="Enter Values of Figures">
+                <label for="CountryOfUserValue">Country of User</label>
+                <input type="text" id="CountryOfUserValue" name="CountryOfUserValue" value="" placeholder="Enter Value">
+                <label for="BroughtFromValue">Brought From</label>
+                <input type="text" id="BroughtFromValue" name="BroughtFromValue" value="" placeholder="Enter Brought From">
+                <br></br>
+                <p1>Select a table to join</p1>
+                <label for="JoinTable">Table</label>
+                <input type="text" id="JoinTable" name="JoinTable" value="" placeholder="Enter Table">
+                <label for="JoinAttribute">Attribute</label>
+                <input type="text" id="JoinAttribute" name="JoinAttribute" value="" placeholder="Enter Attribute">
+                <br></br>
+                <button id="submitUserData" class="button" type="submit">Submit</button>
+                <script src="HtmltoPHPPageUser.JS"></script>
+            </center>
+        </form>
+    </body>
+</html>

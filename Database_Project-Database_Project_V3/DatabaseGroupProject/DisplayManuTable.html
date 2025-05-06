@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body {
+                background-color: black;
+                color:white;
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            }
+
+            .button {
+                 background-color: gray;
+                 color: white;
+                 padding: 15px 32px;
+                 text-align: center;
+                 text-decoration: none;
+                 display: inline-block;
+                 font-size: 16px;
+                 margin: 4px 2px;
+                 cursor: pointer;
+                }
+        </style>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <title>DisplayManu</title>
+    </head>
+    <body>
+        <!--
+        Options include
+        Simple Select all for the table of their choice
+        A filter that only shows selected columns that the user picks from their picked table of choice
+        A filter that would perform a where clause
+        A filter that would do a join clause on a x amount of tables on the the user picked table
+        A filter that serve as a group by clause
+        A filter for certain tables where it can do min and max, count, sum, avg
+        A filter that allows for updates and deletes 
+        -->
+        <button id="backbutton" class="button" type="button">Back</button>
+        <script src="BackButton.JS"></script>
+        <center>
+            <h1>Figure Table</h1>
+            <h3>Filters</h3>
+        </center>
+        <form action="DisplayManuTablePHP.php" method="get">
+            <center>
+                <p1>Select the tables you want to see</p1>
+                <br></br>
+                <label for="SelectManufacturerID">ManufacturerID</label>
+                <input type="radio" id="SelectManufacturerID" name="SelectManufacturerID" value="ManufacturerID">
+                <label for="SelectManufacturerName">ManufacturerName</label>
+                <input type="radio" id="SelectManufacturerName" name="SelectManufacturerName" value="ManufacturerName">
+                <label for="SelectManufacturerCountry">ManufacturerCountry</label>
+                <input type="radio" id="SelectManufacturerCountry" name="SelectManufacturerCountry" value="ManufacturerCountry">
+                <label for="SelectManufacturerSite">ManufacturerSite</label>
+                <input type="radio" id="SelectManufacturerSite" name="SelectManufacturerSite" value="ManufacturerSite">
+                <label for="SelectSellerName">SellerName</label>
+                <input type="radio" id="SelectSellerName" name="SelectSellerName" value="SellerName">
+                <br></br>
+                <p1>Insert values to filter by</p1>
+                <label for="ManufacturerIDValue">Manufacturer ID</label>
+                <input type="text" id="ManufacturerIDValue" name="ManufacturerIDValue" value="" placeholder="Enter ID">
+                <label for="ManufacturerNameValue">Manufacturer Name</label>
+                <input type="text" id="ManufacturerNameValue" name="ManufacturerNameValue" value="" placeholder="Enter Name">
+                <label for="ManufacturerCountryValue">Manufacturer Country</label>
+                <input type="text" id="ManufacturerCountryValue" name="ManufacturerCountryValue" value="" placeholder="Enter manufacturer Country">
+                <label for="ManufacturerSiteValue">Site</label>
+                <input type="text" id="ManufacturerSiteValue" name="ManufacturerSiteValue" value="" placeholder="Enter Site">
+                <label for="SellerNameValue">Seller Name</label>
+                <input type="text" id="SellerNameValue" name="SellerNameValue" value="" placeholder="Enter Seller name">
+                <br></br>
+                <p1>Select a table to join</p1>
+                <label for="JoinTable">Table</label>
+                <input type="text" id="JoinTable" name="JoinTable" value="" placeholder="Enter Table">
+                <label for="JoinAttribute">Attribute</label>
+                <input type="text" id="JoinAttribute" name="JoinAttribute" value="" placeholder="Enter Attribute">
+                <br></br>
+                <button id="submitManuData" class="button" type="submit">Submit</button>
+
+            </center>
+        </form>
+    </body>
+</html>
